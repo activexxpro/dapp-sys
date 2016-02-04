@@ -145,7 +145,7 @@ contract DSEasyMultisig is DSBaseActor
             return false;
         }
         var a = actions[action_id];
-        if( block.now > a.expiration ) {
+        if( block.timestamp > a.expiration ) {
             return false;
         }
         if( a.triggered ) {
